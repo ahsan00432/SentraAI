@@ -1,0 +1,14 @@
+{
+  "name": "sentraai",
+  "version": "1.0.0",
+  "description": "Security intelligence for agentic systems.",
+  "type": "module",
+  "bin": {
+    "sentraai": "./bin/sentraai.js"
+  },
+  "scripts": {
+    "scan": "node ./bin/sentraai.js scan .",
+    "start": "node ./server.js"
+  },
+  "license": "MIT"
+}

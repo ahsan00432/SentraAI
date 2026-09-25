@@ -1,0 +1,16 @@
+name: SentraAI security scan
+description: Security intelligence for agentic systems. Scan AI-agent projects for secrets, prompt injection, risky tools, dependencies, and workflow permissions.
+author: SentraAI
+inputs:
+  path:
+    description: Repository path to scan
+    required: false
+    default: .
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: node "${{ github.action_path }}/bin/sentraai.js" scan "${{ inputs.path }}"
+branding:
+  icon: shield
+  color: orange
